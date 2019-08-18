@@ -1,29 +1,3 @@
-*{
-    box-sizing: border-box;
-}
-html,body,
-ul,ol,li,
-h1,h2,h3,h4,h5,h6,p,
-section, header, footer, nav,
-form,input,div{
-    margin: 0;
-    padding: 0;
-}
-body {
-    background-color: #DEDEDE;
-    color: #3C3B3B;
-    font-size: 62.5%;
-}
-ul,ol {
-    list-style:  none;
-}
-a:link, a:visited, a:hover, a:active {
-    color:#3C3B3B;
-    text-decoration: none;
-}
-p {
-    font-size: 1.2em;
-}
 .wrapper {
     width: 100%;
     margin: 0 auto;
@@ -32,21 +6,7 @@ p {
     width: 90%;
     margin: 0 auto;
 }
- /*スマホ*/
- @media screen and (max-width: 599px) {
-  }
- /*タブレット*/
- @media screen and (min-width: 560px ) and (max-width: 959px) {
-    p {
-        font-size: 1.4em;
-    }
-  }
- /*PC*/
- @media screen and (min-width: 960px) {
-    p {
-        font-size: 1.6em;
-    }
-  }
+
 /*--------------------header--------------------*/
 /*スマホ*/
 @media screen and (max-width: 599px) {
@@ -241,7 +201,8 @@ p {
         right: 0;
         top: 150px;
         font-size: 1.5em;
-        background-color: rgba(255,255,255,0.5) ;
+        background-color: #ffffff;
+        background-color: rgba(255,255,255,0.5);
         padding: 5px;
         z-index: 25;
     }
