@@ -347,10 +347,10 @@ footer a:hover,　footer a:active {
     margin-bottom: 20px;
 
 }
-.map {
+.map-wrap {
     width: 100%;
 }
-.map iframe {
+.map {
     width: 100%;
     margin: 10px auto 30px;
 }
@@ -366,7 +366,7 @@ footer a:hover,　footer a:active {
     .headding h2 {
         font-size: 1.8em;
     }
-    h2.column-heading {
+    .column-heading {
         font-size: 1.7em;
     }
  }
@@ -378,7 +378,7 @@ footer a:hover,　footer a:active {
     .headding h2 {
         font-size: 2.5em;
     }
-    h2.column-heading {
+    .column-heading {
         font-size: 2em;
     }
  }
@@ -405,14 +405,14 @@ footer a:hover,　footer a:active {
     .headding h2 {
         font-size: 2.8em;
     }
-    h2.column-heading {
+    .column-heading {
         font-size: 2.5em;
     }
     .columun_box p {
         width: 70%;
         margin: 0 auto;
     }
-    .map iframe {
+    .map {
         margin: 30px auto 60px;
     }
 }
@@ -480,13 +480,13 @@ footer a:hover,　footer a:active {
 .main-contents {
     width: 100%;
 }
-.main-contents img {
+.main-content__img {
     width: 100%;
 }
-.main-contents h2 {
+.columunHeading-center {
     text-align: center;
 }
-.main-contents p {
+.main-contents-text {
     margin-bottom: 20px;
 }
 /*タブレット*/
@@ -515,7 +515,7 @@ footer a:hover,　footer a:active {
         border-bottom: thin solid #555;
         margin-bottom: 20px;
     }
-    .news-text p {
+    .news-text__p {
         display: inline;
         margin-right: 30px;
     }
