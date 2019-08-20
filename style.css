@@ -185,13 +185,13 @@
 /*スマホ*/
 @media screen and (max-width: 599px) {
     .side-area {
-        display: none
+        display: none;
     }
 }
 /*タブレット*/
 @media screen and (min-width: 560px ) and (max-width: 959px) {
     .side-area {
-        display: none
+        display: none;
     }
 }
 /*PC*/
@@ -207,8 +207,10 @@
         z-index: 25;
     }
     .side-button {
-        -webkit-writitng-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
+        -moz-writing-mode: vertical-rl;
+        -o-writing-mode: vertical-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: tb-rl;
         writing-mode: vertical-rl;
     }
  }
