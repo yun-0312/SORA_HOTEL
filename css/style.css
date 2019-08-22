@@ -1,0 +1,842 @@
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.main-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*--------------------header--------------------*/
+/*スマホ*/
+@media screen and (max-width: 599px) {
+    header {
+        display: none
+    }
+ }
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) { 
+    header {
+        display: none
+    }
+}
+/*PC*/
+@media screen and (min-width: 960px) {
+    header {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        background-color: #FFFFFF;
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:24;
+        width:100%;
+    }
+    .header-logo {
+        font-size : 2em;
+        width: 35%;
+        padding: 10px;
+    }
+    .header-nav {
+        width: 65%;
+    }
+    .header-menu {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.1em;
+    }
+    .header-nav__button {
+        font-size: 1.6em;
+    }
+ }
+/*-----------------humberger------------------*/
+.nav-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 100;
+  }
+.global-nav {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    vertical-align: baseline;
+    background-color: #fff;
+    border: 12px solid #1c1c1c;
+    transition: all .6s;
+    z-index: 200;
+  }
+.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px; 
+    height: 50px;
+    cursor: pointer;
+    z-index: 300;
+}
+.global-nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto 0;
+    padding: 20%;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+}
+.global-nav__item {
+    text-align: center;
+    padding: 0 14px;
+}
+.global-nav__item a {
+    display: block;
+    font-size: 1.6em;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #111;
+}
+.global-nav-button {
+    margin: 10px;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    background-color: #E1E2E6;
+} 
+.global-nav__item a:hover {
+    background-color: #eee;
+}
+.hamburger__line {
+    position: absolute;
+    left: 11px;
+    width: 30px;
+    height: 1.5px;
+    background-color: #111;
+    transition: all .6s;
+}
+.hamburger__line--1 {
+    top: 14px;
+}
+.hamburger__line--2 {
+    top: 24px;
+}
+.hamburger__line--3 {
+    top: 34px;
+}
+.black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+}
+/* 表示された時用のCSS */
+.nav-open .global-nav {
+    right: 0;
+}
+.nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+}
+.nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 23px;
+}
+.nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+}
+.nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 23px;
+}
+/*スマホ*/
+@media screen and (max-width: 599px) {
+ }
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .global-nav__list {
+        padding: 10%;
+    }
+    .global-nav-button {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+ }
+/*PC*/
+@media screen and (min-width: 960px) {
+    .nav-wrap {
+        display: none;
+    }
+ }
+/*--------------------side--------------------*/
+/*スマホ*/
+@media screen and (max-width: 599px) {
+    .side-area {
+        display: none;
+    }
+}
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .side-area {
+        display: none;
+    }
+}
+/*PC*/
+@media screen and (min-width: 960px) {
+    .side-area { 
+        position: fixed;
+        right: 0;
+        top: 150px;
+        font-size: 1.5em;
+        background-color: #ffffff;
+        background-color: rgba(255,255,255,0.5);
+        padding: 5px;
+        z-index: 25;
+    }
+    .side-button {
+        -moz-writing-mode: vertical-rl;
+        -o-writing-mode: vertical-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    }
+ }
+
+/*--------------------footer--------------------*/
+footer {
+    background-color: #333030;
+    color: #EFEDED;
+    padding: 2%;
+}
+footer a:link, footer a:visited, 
+footer a:hover,　footer a:active {
+    color: #EFEDED;
+    text-decoration: none;
+}
+.footer-nav {
+    width: 90%;
+}
+.footer-menu {
+    margin-bottom: 2%;
+}
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+/*スマホ*/
+@media screen and (max-width: 599px) {
+    .footer-nav {
+        width: 80%;
+    }
+    .footer-menu {
+        width: 100%;
+    }
+    .footer-address {
+        float: left;
+    }
+    .footer-copyright {
+        clear: both;
+        float: right;
+    }
+    .footer-container {
+        overflow: auto;
+    }
+}
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    footer {
+        font-size: 1.3em;
+    }
+    .footer-address p,.footer-copyright {
+        font-size: 1.1em;
+    }
+    .footer-nav {
+        width: 60%;
+    }
+    .footer-menu {
+        width: 100%;
+    }
+    .footer-address {
+        float: left;
+    }
+    .footer-copyright {
+        clear: both;
+        float: right;
+    }
+    .footer-container {
+        overflow: auto;
+    }
+ }
+/*PC*/
+@media screen and (min-width: 960px) {
+    footer {
+        font-size: 1.6em;
+    }
+    .footer-address p,.footer-copyright {
+        font-size: 1.1em;
+    }
+    .footer-nav {
+        width: 45%;
+    }
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+ }
+/*--------------------共通--------------------*/
+.main-pic-box {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.logo, .headding2 {
+    font-size: 3em;
+    position: absolute;
+}
+.logo {
+    font-weight: bold;
+    z-index: 12;
+    top: 5px;
+    left: 5px;
+}
+.headding2 {
+    z-index: 13;
+    top: 20%;
+    left: 50px;
+    color: #504D4D;
+    font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
+}
+.header-logo2 {
+    width: 100%;
+    height: 50px;
+    background-color: #FFFFFF;
+}
+.header-logo2 h1 {
+    padding-left: 10px;
+}
+.headding {
+    width: 90%;
+    margin: 15px auto 0;
+}
+.columun_box {
+    width: 80%;
+    margin: 30px auto;
+}
+.first_columun {
+    margin-top: 15px; 
+}
+.border2 {
+    border-bottom: 1.3px solid#555555;
+    margin-bottom: 20px;
+
+}
+.map-wrap {
+    width: 100%;
+}
+.map {
+    width: 100%;
+    margin: 10px auto 30px;
+}
+/*スマホ*/
+@media screen and (max-width: 599px) {
+    .wrapper {
+        min-width: 320px;
+    }
+    .header-logo2 h1 {
+        padding-top: 5px;
+        font-size: 3em;
+    }
+    .headding h2 {
+        font-size: 1.8em;
+    }
+    .column-heading {
+        font-size: 1.7em;
+    }
+ }
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .header-logo2 h1 {
+        font-size: 3.5em;
+    }
+    .headding h2 {
+        font-size: 2.5em;
+    }
+    .column-heading {
+        font-size: 2em;
+    }
+ }
+/*PC*/
+@media screen and (min-width: 960px) {
+    .wrapper {
+        max-width: 1980px;
+        margin: 0 auto;
+    }
+    .main-pic-box {
+        height: 85vh;
+        min-height: 80vh;
+        background-position: 0 80px;
+    }
+    .logo {
+        display: none;
+    }
+    .header-logo2 {
+        display: none;
+    }
+    .headding {
+        margin-top: 110px;
+    }
+    .headding h2 {
+        font-size: 2.8em;
+    }
+    .column-heading {
+        font-size: 2.5em;
+    }
+    .columun_box p {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .map {
+        margin: 30px auto 60px;
+    }
+}
+/*--------------------home--------------------*/
+#slide-pic {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.slide {
+    z-index: 10;
+    opacity: 0;
+    position: absolute;
+    -webkit-animation: anime 30s 0s infinite;
+    animation: anime 30s 0s infinite;
+}
+.slide1 {
+    background-image: url('../images/heading_pic1.jpg');
+}
+.slide2 {
+    background-image: url('../images/heading_pic2.jpg');
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.slide3 {
+    background-image: url('../images/heading_pic3.jpg');
+    -webkit-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.slide4 {
+    background-image: url('../images/heading_pic4.jpg');
+    -webkit-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.slide5 {
+    background-image: url('../images/heading_pic5.jpg');
+    -webkit-animation-delay: 24s;
+    animation-delay: 24s;
+}
+@keyframes anime {
+    0% {
+        opacity: 0;
+    }
+    8% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+        transform: scale(1.2) ;
+        z-index:9;
+    }
+    100% { opacity: 0 }
+    }
+.home-logo {
+    top: 30%;
+}
+.news {
+    margin-bottom: 30px;
+}
+.main-contents {
+    width: 100%;
+}
+.main-content__img {
+    width: 100%;
+}
+.columunHeading-center {
+    text-align: center;
+}
+.main-contents-text {
+    margin-bottom: 20px;
+}
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .main-contents {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .main-content {
+        width: 49%;
+        margin-right: 1%;
+    }
+    .main-content-margin {
+        margin-top: 20px;
+    }
+ }
+/*PC*/
+@media screen and (min-width: 960px) {
+    #slide-pic {
+        height: 85vh;
+        min-height: 80vh;
+    }
+    .border {
+        border-bottom: thin solid #555;
+        margin-bottom: 20px;
+    }
+    .news-text__p {
+        display: inline;
+        margin-right: 30px;
+    }
+    .main-contents {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .main-content {
+        width: 49%;
+        margin-right: 1%;
+    }
+    .main-content-margin {
+        margin-top: 20px;
+    }
+ }
+ /*---------------guestroom_introduction------------------*/
+.main-pic-box2 {
+    background-image: url('../images/room_heading.jpg');
+    background-position: 65% center;
+}
+.room-guid {
+    display: none;
+}
+.room-heading {
+    font-size: 1.7em;
+}
+.room-main-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.room-pic1 {
+    width: 100%;
+}
+.room-pics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.room-pic {
+    width: 49.5%;
+}
+/*スマホ*/
+@media screen and (max-width: 599px) {
+    .room-pic2, .room-pic4, .room-pic6 {
+        margin-right: 1%;
+    }
+}
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .guestroom-head {
+        color: #A9A9A9;
+    }
+    .room-heading {
+        font-size: 2em;
+    }
+    .room-pic1 {
+        width: 49%;
+        margin-right: 1%;
+        order: 0;
+    }
+    .room-text {
+        width: 50%;
+        order: 1;
+    }
+    .room-pics {
+        order: 2;
+    }
+    .room-pic {
+        width: 32.3%;
+    }
+    .room-pic2, .room-pic3, .room-pic5, .room-pic6 {
+        margin-right: 1%;
+    }
+    .room-text p {
+        font-size: 0.9em;
+    }
+}
+/*PC*/
+@media screen and (min-width: 960px) {
+    .main-pic-box2 {
+        background-position: center 20%;
+    }
+    .room-guid {
+        display:flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 10px 20%;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    .room-heading {
+        font-size: 2.5em;
+    }
+    .room-pic1 {
+        width: 49%;
+        margin-right: 1%;
+        order: 0;
+    }
+    .room-text {
+        width: 50%;
+        order: 1;
+    }
+    .room-pics {
+        order: 2;
+    }
+    .room-pic {
+        width: 15.8%;
+    }
+    .room-pic2, .room-pic3, .room-pic4, .room-pic5, .room-pic6 {
+        margin-right: 1%;
+    }
+}
+ /*-------------------facilities---------------------*/
+ .main-pic-box3 {
+    background-image: url('../images/facilities_heading.jpg');
+}
+.facilities-main-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.facilities-main-content h2{
+    text-align: left;
+    font-size: 1.7em
+}
+.facilities-pic1 {
+    width: 100%;
+}
+.facilities-pics {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.facilities-pic {
+    width: 33%;
+}
+.facilities-text {
+    margin-bottom: 20px;
+}
+.facilities-text th {
+    font-weight: normal;
+    width: 30%;
+    text-align: left;
+}
+/*スマホ*/
+@media screen and (max-width: 599px) {
+}
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .facilities-main-content h2 {
+        font-size: 2em;
+    }
+    .facilities-text {
+        font-size: 1.4em;
+    }
+}
+/*PC*/
+@media screen and (min-width: 960px) {
+    .facilities-main-content h2 {
+        font-size: 2.5em;
+    }
+    .facilities-text {
+        font-size: 1.4em;
+    }
+}
+ /*-------------------tourisut_spots-------------------*/
+ .main-pic-box4 {
+    background-image: url('../images/heading_pic1.jpg');
+}
+.tourist-spots-contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.tourist_spots_content {
+    margin: 30px auto 0;
+    text-align: center;
+    width: 90%;
+}
+.tourist_spots_pics {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .tourist_spots_content {
+        width: 48%;
+    }
+    .tourist_spots_pics {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+    }
+}
+/*PC*/
+@media screen and (min-width: 960px) {
+    .tourist_spots_content {
+        width: 48%;
+    }
+    .tourist_spots_pics {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+ /*--------------------privacy_policy--------------------*/
+.text-box {
+    width: 90%;
+    margin: 20px auto 40px;
+}
+.text-box h3 {
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+.text-box ul {
+    font-size: 1.1em;
+    list-style: disc;
+    margin: 0 20px; 
+}
+
+ /*スマホ*/
+@media screen and (max-width: 599px) {
+    .text-box p {
+        font-size: 1.1em;
+    }
+ }
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .text-box h3, .text-box ul {
+        font-size: 1.5em;
+    }
+ }
+/*PC*/
+@media screen and (min-width: 960px) {
+    .text-box h3 {
+        font-size: 1.8em;
+    }
+    .text-box ul {
+        font-size: 1.6em;
+    }
+ }
+
+ /*--------------------access--------------------*/
+.access-main img {
+    width: 100%;
+}
+ /*--------------------contact--------------------*/
+.contact-wrapper {
+    width: 85%;
+    margin: 20px auto 30px;
+}
+.contact-wrapper label {
+    font-size: 1.2em;
+    width: 30%;
+}
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+input {
+    height: 25px;
+}
+textarea {
+    height: 70px;
+}
+.red {
+    color: red;
+}
+.submit-center {
+    width: 100%;
+    text-align: center;
+}
+.submit {
+    background-color: #E86E6E;
+    color: white;
+    font-size: 1.2em;
+    width: 170px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+/*タブレット*/
+@media screen and (min-width: 560px ) and (max-width: 959px) {
+    .contact-wrapper label {
+        font-size: 1.6em;
+    }    
+}
+/*PC*/
+@media screen and (min-width: 960px) {
+    .contact-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .contact-wrapper label {
+        display: block;
+        font-size: 1.6em;
+        width: 30%;
+    }
+    input, textarea {
+        width: 70%;
+        margin-bottom: 25px;
+    }
+    input {
+        height: 30px;    
+    }
+    textarea {
+        height: 100px;
+    }
+}
